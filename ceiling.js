@@ -18,7 +18,7 @@ const search = (array, target) => {
             end = mid - 1;
         }
     }
-    return mid - 1;
+    return mid + 1;
 };
 
 console.log(search(array, target));
