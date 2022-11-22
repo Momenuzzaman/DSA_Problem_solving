@@ -1,7 +1,7 @@
 const letters = ["c", "f", "j", "z"];
-const target = 'c';
+const target = 'f';
 const nums = [10, 20, 30, 40, 50, 60, 70];
-const target2 = 70;
+const target2 = 60;
 
 const nextGreatestLetter = (letters, target) => {
     let start = 0;
@@ -18,7 +18,6 @@ const nextGreatestLetter = (letters, target) => {
     }
     return letters[start % letters.length];
 };
-
 
 console.log(nextGreatestLetter(letters, target));
 console.log(nextGreatestLetter(nums, target2));

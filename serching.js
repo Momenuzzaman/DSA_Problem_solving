@@ -40,3 +40,4 @@ const searching = (numbers, target) => {
 };
 
 console.log(searching(numbers, target));
+console.log(searching(numbers2, target));
