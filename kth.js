@@ -17,7 +17,7 @@ const search = (arr, k) => {
         else {
             newArray.push(n);
             n++;
-            if (newArray.length >= k) {
+            if (newArray.length > k) {
                 break;
             }
         }
