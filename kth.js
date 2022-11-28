@@ -1,5 +1,4 @@
 const arr = [1, 2, 3, 4];
-[4, 5, 6, 7]
 const k = 2;
 
 const arr2 = [2, 3, 4, 7, 11];
@@ -18,7 +17,7 @@ const search = (arr, k) => {
         else {
             newArray.push(n);
             n++;
-            if (newArray.length > k) {
+            if (newArray.length >= k) {
                 break;
             }
         }
@@ -26,7 +25,6 @@ const search = (arr, k) => {
     return newArray[k - 1];
 };
 console.log(search(arr, k));
-
 
 console.log(search(arr2, k2));
 
