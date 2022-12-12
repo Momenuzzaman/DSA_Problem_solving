@@ -1,8 +1,5 @@
 const maxProductDifference = (numbers) => {
-    const numbers = [...numbers]
     const sortedNumber = numbers.sort((a, b) => a - b);
-    const sortedNumber2 = numbers.sort((a, b) => b - a);
-    console.log(sortedNumber, sortedNumber2);
     const result = (sortedNumber[sortedNumber.length - 2] * sortedNumber[sortedNumber.length - 1]) - (sortedNumber[0] * sortedNumber[1]);
     return result;
 };
