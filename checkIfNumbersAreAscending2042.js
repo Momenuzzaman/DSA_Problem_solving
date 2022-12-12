@@ -3,10 +3,10 @@ var areNumbersAscending = function (s) {
         .split(" ")
         .filter((num) => +num)
         .map((item) => +item);
-    console.log(arr)
+    console.log(arr);
     let is_sorted = true;
 
-    for (let i = 0, length = arr.length; i < length - 1; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {
         if (arr[i] > arr[i + 1] || arr[i] === arr[i + 1]) {
             is_sorted = false;
             break;
