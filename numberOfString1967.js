@@ -1,7 +1,6 @@
-var numOfStrings = (patterns, word) => {
+const numOfStrings = (patterns, word) => {
     let count = 0;
     for (let pattern of patterns) {
-        console.log(pattern);
         if (word.includes(pattern)) {
             count++;
         }
@@ -9,3 +8,4 @@ var numOfStrings = (patterns, word) => {
     return count;
 };
 console.log(numOfStrings(["a", "abc", "bc", "d"], "abc"));
+console.log(numOfStrings(["a", "b", "c"], "aaaaabbbbb"));
