@@ -9,15 +9,13 @@ console.log(decode([6, 2, 7, 3], 4));
 
 
 
-// let decode = function (encoded, first) {
-//     let result = [first],
-//         current = first;
-//         console.log(first)
-//     for (let i = 0; i < encoded.length; i++) {
-//         current = encoded[i] ^ current;
-//         console.log(current);
-//         result[1+i] = current;
-//     }
-//     return result;
-// };
-// console.log(decode([1, 2, 3], 1));
+let decode2 = function (encoded, first) {
+    let result = [first],
+        current = first;
+    for (let i = 0; i < encoded.length; i++) {
+        current = encoded[i] ^ current;
+        result[1 + i] = current;
+    }
+    return result;
+};
+console.log(decode2([1, 2, 3], 1));
