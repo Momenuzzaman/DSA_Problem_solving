@@ -48,5 +48,17 @@ const traverse = (array, i) => {
     console.log(array[i]);
     traverse(array, i + 1);
 };
-
 traverse(array, 0);
+
+// sum 
+let sumValue = 0;
+const summation = (array, i) => {
+    if (array.length == i) {
+        return;
+    }
+    sumValue = sumValue + array[i];
+    summation(array, i + 1);
+    return sumValue;
+};
+console.log(summation(array, 0));
+
