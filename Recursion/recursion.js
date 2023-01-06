@@ -78,6 +78,4 @@ const reverse = (array, i, j) => {
     return array;
 };
 console.log(reverse(array, 0, array.length - 1));
-console.log(reverse(array2, 0, array.length - 1));
-const arrayReverse = array2.reverse();
-console.log(arrayReverse)
+console.log(reverse(array2, 0, array.length));
