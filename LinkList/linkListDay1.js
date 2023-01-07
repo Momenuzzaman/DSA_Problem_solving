@@ -5,22 +5,20 @@ class Node {
     }
 }
 
-class linkList {
+class LinkList {
     constructor(value) {
         let node = new Node(value);
         this.head = node;
         this.tail = node;
     }
-    myaAppend(value) {
+    append(value) {
         let node = new Node(value);
         this.tail.next = node;
         this.tail = node;
     }
 }
 
-const link = new linkList(500);
-link.myaAppend(600);
-link.myaAppend(700);
-link.myaAppend(800);
-
-console.log(link);
+const list = new LinkList(1);
+list.append(2);
+list.append(3);
+console.log(list); 
