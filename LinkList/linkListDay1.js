@@ -22,6 +22,13 @@ class LinkList {
         node.next = this.head;
         this.head = node;
     }
+    print() {
+        let data = this.head;
+        while (data != null) {
+            console.log(data.value);
+            data = data.next;
+        }
+    }
 }
 
 const list = new LinkList(2);
@@ -29,4 +36,6 @@ list.append(3);
 list.append(4);
 list.append(5);
 list.prepend(1);
-console.log(list);  
+console.log(list);
+
+list.print();
