@@ -1,3 +1,4 @@
+
 class Node {
     constructor(value, next = null) {
         this.value = value;
@@ -21,4 +22,5 @@ class LinkList {
 const list = new LinkList(1);
 list.append(2);
 list.append(3);
-console.log(list); 
+list.append(4);
+console.log(list);  
