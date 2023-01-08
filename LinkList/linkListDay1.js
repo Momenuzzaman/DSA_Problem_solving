@@ -42,11 +42,14 @@ class LinkList {
         else {
             let newNode = new Node(value);
             let preNode = this.findNode(position - 1);
-            console.log(preNode);
+            newNode.next = preNode.next;
+            preNode.next = newNode;
+
+            this.length++;
         }
     }
     findNode(n) {
-        let count = 0;
+        let count = 1;
         let data = this.head;
         while (data) {
             if (count === n) break;
@@ -63,7 +66,8 @@ list.append(4);
 list.append(5);
 list.prepend(1);
 list.appendAt(-1, 1);
-list.appendAt(10, 7)
+list.appendAt(10, 7);
+list.appendAt(100, 2);
 console.log(list);
 
 list.print();
