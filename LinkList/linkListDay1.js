@@ -11,22 +11,30 @@ class LinkList {
         let node = new Node(value);
         this.head = node;
         this.tail = node;
+        this.length = 1;
     }
     append(value) {
         let node = new Node(value);
         this.tail.next = node;
         this.tail = node;
+        this.length++;
     }
     prepend(value) {
         let node = new Node(value);
         node.next = this.head;
         this.head = node;
+        this.length++;
     }
     print() {
         let data = this.head;
-        while (data != null) {
+        while (data) {
             console.log(data.value);
             data = data.next;
+        }
+    }
+    appendAt(value, position) {
+        if (position === 1) {
+            this.prepend(value);
         }
     }
 }
