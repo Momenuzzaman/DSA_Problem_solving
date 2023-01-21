@@ -23,6 +23,7 @@ class LinkList {
     prepend(value) {
         let node = new Node(value);
         node.next = this.head;
+        this.head.prev = node;
         this.head = node;
         this.length++;
     }
@@ -63,5 +64,6 @@ class LinkList {
 
 const list = new LinkList(2);
 list.append(3)
+list.prepend(1)
 
 console.log(list.head)
