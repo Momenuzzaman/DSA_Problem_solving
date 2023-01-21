@@ -25,6 +25,7 @@ class LinkList {
         let node = new Node(value);
         node.next = this.head;
         this.head = node;
+        this.tail.next = this.head
         this.length++;
     }
     print() {
@@ -64,4 +65,5 @@ class LinkList {
 
 const list = new LinkList(2);
 list.append(3)
+list.prepend(1)
 console.log(list.head)

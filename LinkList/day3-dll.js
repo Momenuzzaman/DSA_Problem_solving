@@ -1,8 +1,8 @@
-
 class Node {
-    constructor(value, next = null) {
+    constructor(value, next = null, prev = null) {
         this.value = value;
         this.next = next;
+        this.prev = prev
     }
 }
 
@@ -15,6 +15,7 @@ class LinkList {
     }
     append(value) {
         let node = new Node(value);
+        node.prev = this.tail
         this.tail.next = node;
         this.tail = node;
         this.length++;
@@ -61,13 +62,6 @@ class LinkList {
 }
 
 const list = new LinkList(2);
-list.append(3);
-list.append(4);
-list.append(5);
-list.prepend(1);
-list.appendAt(-1, 1);
-list.appendAt(10, 7);
-list.appendAt(100, 2);
-console.log(list.head);
+list.append(3)
 
-list.print();
+console.log(list.head)
